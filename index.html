@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="id"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap">
 <title>UBTR 25K · Peta, Profil &amp; Rencana Lengkap</title>
 <style>
 :root{--bg:#fbf7f2;--card:#fff;--tx:#1f2328;--mut:#6b7280;--ln:#e5e0d8;--acc:#e8590c;--up1:#f59f00;--up2:#e8590c;--up3:#c2255c;--dn:#0ca678;--fl:#868e96;--area:#fde3cf;--map:#f3efe8;
@@ -42,10 +44,53 @@ tr.c{cursor:pointer}tr.c:hover,tr.on{background:var(--area)}
 .nv{display:flex;gap:8px;overflow-x:auto;padding:2px 0 14px}.nv a{flex:none;text-decoration:none;font-size:13px;color:var(--tx);background:var(--card);border:1px solid var(--ln);border-radius:999px;padding:6px 13px}.nv a:hover{background:var(--area)}
 .cd{margin-top:14px;background:rgba(0,0,0,.18);border-radius:14px;padding:12px 14px}.cdt{font-size:13px;color:#ffe8d6;margin-bottom:8px}.cdt input{font:inherit;font-size:13px;border:0;border-radius:6px;padding:2px 6px;background:#fff;color:#1f2328}
 .cdb{display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:8px}.cu{background:rgba(255,255,255,.16);border-radius:10px;padding:8px;text-align:center}.cu b{display:block;font-size:clamp(22px,6vw,32px);font-variant-numeric:tabular-nums;line-height:1.1}.cu span{font-size:11px;opacity:.9}
+:root{--bg:#f4f1ec;--ln:#e7e1d7;--sh:0 1px 2px rgba(20,20,20,.04),0 10px 28px -14px rgba(20,20,20,.22);--r:20px;--fh:"Barlow Condensed","Arial Narrow",Impact,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1013;--card:#171a1f;--ln:#262a31;--map:#12151a;--area:#33261d;--sh:none}}
+:root[data-theme="dark"]{--bg:#0e1013;--card:#171a1f;--ln:#262a31;--map:#12151a;--area:#33261d;--sh:none}
+body{font-family:"Barlow","Segoe UI",system-ui,-apple-system,Arial,sans-serif;font-size:15px}
+h1,h2,.chip b,.cu b,th,.nv a,.tag,.wk,.tg button,.btn,.tdate,.eyebrow{font-family:var(--fh)}
+.w{padding-top:16px}
+.hero{position:relative;overflow:hidden;border-radius:var(--r);box-shadow:var(--sh);padding:26px 22px;background:radial-gradient(800px 260px at 90% -30%,rgba(255,255,255,.28),transparent 60%),linear-gradient(120deg,#ff6b1a 0%,#e8590c 38%,#c2255c 100%)}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(115deg,rgba(255,255,255,.06) 0 2px,transparent 2px 24px)}
+.hero>*{position:relative;z-index:1}
+h1{font-size:clamp(34px,9vw,58px);font-weight:800;line-height:.95;text-transform:uppercase;letter-spacing:.01em}
+.hero p{font-size:15px;font-weight:500}
+.chips{gap:10px}.chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(6px);border-radius:14px}
+.chip b{font-size:26px;font-weight:700;line-height:1.05;letter-spacing:.01em}.chip span{font-weight:500}
+.cd{background:rgba(10,10,10,.28);border:1px solid rgba(255,255,255,.14);border-radius:16px}.cdt{font-weight:500}
+.cu{background:rgba(255,255,255,.14);border-radius:12px;padding:10px 6px}.cu b{font-size:clamp(34px,10vw,52px);font-weight:800;line-height:1}.cu span{text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+.nv{gap:8px;padding-bottom:16px}.nv a{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:7px 15px;box-shadow:var(--sh)}.nv a:hover{background:var(--acc);color:#fff;border-color:var(--acc)}
+.card{border-radius:var(--r);box-shadow:var(--sh);padding:20px;margin-bottom:18px}
+.card h2{font-size:24px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.card h2:before{content:"";width:6px;height:20px;border-radius:3px;background:linear-gradient(var(--up1),var(--up3))}
+.card>p{font-size:14px}
+.tg{border-radius:999px;background:var(--bg);padding:3px;border:0}.tg button{border-radius:999px;font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:6px 15px}
+th{font-size:13px;font-weight:700;letter-spacing:.08em}td{font-size:14px}
+.ph{border-radius:14px;background:var(--bg);border-color:transparent;border-left-width:5px}.ph b{font-family:var(--fh);font-size:19px;font-weight:700;letter-spacing:.02em}
+.tag{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 10px}
+.wk{font-size:15px;letter-spacing:.12em}.rw{padding:9px 0;font-size:14px}
+.dist{border-radius:12px;height:30px}
+.today{background:linear-gradient(135deg,var(--card) 55%,var(--area));position:relative}
+.th{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:10px}.eyebrow{display:block;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.tdate{font-size:clamp(30px,8vw,46px);font-weight:800;line-height:1;text-transform:uppercase;text-align:right;white-space:nowrap}
+.tbig{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:14px}
+.tbig .tt{font-size:17px;font-weight:600;line-height:1.35}.tip{font-size:14px;color:var(--mut);margin:10px 2px 0}
+.tn{font-size:13px;color:var(--mut);margin:10px 2px 0}.tn b{color:var(--tx)}
+.ntf{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px;padding-top:14px;border-top:1px dashed var(--ln);font-size:14px}
+.ntf input{font:inherit;border:1px solid var(--ln);border-radius:8px;padding:3px 6px;background:var(--card);color:var(--tx)}
+.btn{border:0;cursor:pointer;border-radius:999px;background:var(--acc);color:#fff;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:8px 18px}.btn.ghost{background:transparent;color:var(--tx);border:1px solid var(--ln)}
+.nst{font-size:13px;color:var(--mut)}
+.gr{margin:0 0 16px}.gr b{display:block;font-family:var(--fh);font-size:clamp(26px,7vw,38px);font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:.02em}.gr span{display:block;margin-top:8px;font-size:16px;font-weight:500;max-width:60ch;color:#fff3e8;border-left:4px solid rgba(255,255,255,.55);padding-left:12px}
+.toast{display:none;margin-top:12px;border-left:5px solid var(--acc);background:var(--area);border-radius:12px;padding:10px 14px;font-size:14px}.toast.on{display:block}.toast b{font-family:var(--fh);font-size:18px;letter-spacing:.03em}
+@media (max-width:520px){.card{padding:16px}.th{flex-direction:column;align-items:flex-start}.tdate{text-align:left}}
 </style></head><body><div class="w">
-<div class="hero"><h1>UBTR 25K · Peta, Profil &amp; Rencana Lengkap</h1><p>Rute Emergent25K, target waktu, jadwal latihan, makan, tidur · Sabtu, 21 November 2026</p><div class="chips" id="chips"></div></div>
+<div class="hero"><div class="gr"><b id="grh"></b><span id="grm"></span></div><h1>UBTR 25K · Peta, Profil &amp; Rencana Lengkap</h1><p>Rute Emergent25K, target waktu, jadwal latihan, makan, tidur · Sabtu, 21 November 2026</p><div class="chips" id="chips"></div></div>
 
-<div class="nv"><a href="#peta">Peta</a><a href="#profil">Profil elevasi</a><a href="#tanjakan">Tanjakan</a><a href="#cp">Checkpoint</a><a href="#pace">Pace per km</a><a href="#strategi">Strategi</a><a href="#jadwal">Jadwal latihan</a><a href="#makan">Pola makan</a><a href="#tidur">Pola tidur</a><a href="#lain">Persiapan lain</a><a href="#gradien">Sebaran gradien</a></div>
+<div class="nv"><a href="#hari">Hari ini</a><a href="#peta">Peta</a><a href="#profil">Profil elevasi</a><a href="#tanjakan">Tanjakan</a><a href="#cp">Checkpoint</a><a href="#pace">Pace per km</a><a href="#strategi">Strategi</a><a href="#jadwal">Jadwal latihan</a><a href="#makan">Pola makan</a><a href="#tidur">Pola tidur</a><a href="#lain">Persiapan lain</a><a href="#gradien">Sebaran gradien</a></div>
+<div class="card today" id="hari"><div class="th"><div><span class="eyebrow" id="tdy-eb"></span><h2>Jadwal hari ini</h2></div><div class="tdate" id="tdy-date"></div></div>
+<div id="tdy"></div><div class="toast" id="toast"></div>
+<div class="ntf"><button class="btn" id="nbtn">Aktifkan pengingat</button><label>Ingatkan jam <input type="time" id="ntm" value="05:30"> WIB</label><button class="btn ghost" id="ntest">Tes pengingat</button><span class="nst" id="nst"></span></div>
+<p class="cap">Pengingat hanya berbunyi selama halaman ini terbuka di perangkatmu. Untuk pengingat yang tetap muncul walau halaman ditutup, impor file kalender (.ics) jadwal latihan ke Google Calendar atau Apple Calendar.</p></div>
 <div class="card" id="peta"><h2>Peta rute</h2><p>Jejak GPX digambar langsung dari koordinatnya. Sentuh atau arahkan kursor ke jalur untuk melihat posisi, dan posisinya ikut tampil di profil elevasi.</p>
 <div class="bar"><div class="tg" id="tm"><button data-m="g" class="on">Gradien</button><button data-m="e">Elevasi</button></div><div class="tg" id="tk"><button data-k="1" class="on">Km</button><button data-k="0">Km off</button></div><div class="tg" id="tc"><button data-c="1" class="on">Checkpoint</button><button data-c="0">Checkpoint off</button></div></div>
 <svg id="map" viewBox="0 0 900 640" role="img" aria-label="Peta jalur rute UBTR 25K"></svg>
@@ -186,11 +231,31 @@ document.querySelectorAll("#tog button").forEach(b=>b.onclick=()=>{md=b.dataset.
 const SCH=[["30 Okt","Jum","run","Lari santai 5-6 km, atau istirahat bila kaki pegal"],["31 Okt","Sab","key","LONG RUN PUNCAK trail 18-20 km, naik 600-800 m, pace santai. Uji makan, minum, sepatu (Sabtu atau Minggu)"],["1 Nov","Min","rest","Pemulihan: jalan santai 20-30 menit + peregangan (atau long run bila Sabtu tidak dipakai)"],["2 Nov","Sen","str","Istirahat lari + mobilitas 15 menit, foam rolling betis dan paha"],["3 Nov","Sel","key","Hill repeats 6-8 × 2 menit naik keras, turun jalan"],["4 Nov","Rab","str","Lari santai 6-8 km + kekuatan 25-30 menit: glute, betis, core, single-leg (tanpa squat berat)"],["5 Nov","Kam","key","Downhill repeats 5-6 × turunan 3-4 menit, langkah pendek dan cepat"],["6 Nov","Jum","rest","Istirahat, tidur cukup"],["7 Nov","Sab","key","Long run sedang 12-14 km rolling, tanjakan di akhir. LARI BERAT TERAKHIR"],["8 Nov","Min","rest","Istirahat atau jalan santai"],["9 Nov","Sen","rest","Istirahat, atau lari santai 5-6 km (maks. 2 lari dalam 9-11 Nov)"],["10 Nov","Sel","str","Core + mobilitas ringan 15 menit"],["11 Nov","Rab","rest","Istirahat, atau lari santai 5-6 km"],["12 Nov","Kam","run","Lari santai 8-10 km + 3-4 strides 20 detik"],["13 Nov","Jum","rest","Istirahat atau jalan santai"],["14 Nov","Sab","rest","Istirahat atau jalan santai (lari santai 6-8 km sekali di akhir pekan)"],["15 Nov","Min","run","Lari santai 6-8 km (bila belum dilakukan Sabtu)"],["16 Nov","Sen","rest","Istirahat"],["17 Nov","Sel","run","Lari ringan 4-5 km + strides"],["18 Nov","Rab","str","Istirahat lari, mobilitas 10 menit. Mulai prioritaskan tidur"],["19 Nov","Kam","run","Lari ringan 3 km atau istirahat. Tambah porsi karbohidrat"],["20 Nov","Jum","rest","Istirahat, ambil race pack, siapkan perlengkapan"],["21 Nov","Sab","race","RACE UBTR 25K · 25,1 km · Target A 4:00 / B ~4:15"]];
 const TY={key:["Kunci","var(--up3)"],run:["Lari","var(--up1)"],str:["Kekuatan","#4263eb"],rest:["Istirahat","var(--fl)"],race:["Race","var(--acc)"]};
 const WK=["Minggu 1 · latihan puncak","Minggu 2 · pengurangan","Minggu 3 · taper","Minggu race"];
-const t0=new Date(new Date().setHours(0,0,0,0)),d0=new Date(2026,9,30);
-let h="";SCH.forEach((r,i)=>{const w=Math.min(3,Math.floor(i/7)),dt=new Date(d0.getTime()+i*864e5),cl=dt<t0?" past":dt.getTime()===t0.getTime()?" today":"";
+const wn=new Date(Date.now()+252e5),TI=Math.floor((Date.UTC(wn.getUTCFullYear(),wn.getUTCMonth(),wn.getUTCDate())-Date.UTC(2026,9,30))/864e5),d0=new Date(2026,9,30);
+let h="";SCH.forEach((r,i)=>{const w=Math.min(3,Math.floor(i/7)),dt=new Date(d0.getTime()+i*864e5),cl=i<TI?" past":i===TI?" today":"";
  if(i%7===0||i===21)h+=`<div class="wk">${i===21?WK[3]:WK[w]}</div>`;
  h+=`<div class="rw${cl}"><div class="d"><b>${r[1]}</b> ${r[0]}</div><div><span class="tag" style="--c:${TY[r[2]][1]}">${TY[r[2]][0]}</span>${r[3]}</div></div>`});
 $("sch").innerHTML=h;
+{const tips={key:"Sesi kunci: makan karbohidrat + protein 1-2 jam setelah latihan, minum cukup, tidur cukup malam ini.",run:"Lari santai dengan pace ngobrol, jangan dipaksa. Peregangan ringan setelahnya.",str:"Tanpa beban berat di kaki. Fokus teknik dan mobilitas.",rest:"Pemulihan: makan cukup, minum cukup, tidur 7-9 jam.",race:"Sarapan 2-3 jam sebelum start, gel tiap 40 menit, minum tiap 15-20 menit."};
+const big=r=>`<div class="tbig"><span class="tag" style="--c:${TY[r[2]][1]}">${TY[r[2]][0]}</span><div class="tt">${r[3]}</div></div>`;
+let r,eb,nx="";
+if(TI<0){r=SCH[0];eb="Mulai besok · H-"+(22-TI);nx=""}
+else if(TI>22){r=null;eb="Selesai"}
+else{r=SCH[TI];eb=TI===22?"Hari-H":"Hari ke-"+(TI+1)+" dari 23 · H-"+(22-TI);if(TI<22)nx=SCH[TI+1]}
+$("tdy-eb").textContent=eb;
+if(r){$("tdy-date").textContent=r[1]+" "+r[0];$("tdy").innerHTML=(TI<0?`<p class="tip" style="margin:0 0 8px">Latihan dimulai besok. Siapkan sepatu dan botol.</p>`:"")+big(r)+(TI>=0?`<p class="tip">${tips[r[2]]}${TI>=19&&TI<22?" Prioritaskan tidur.":""}${TI===20?" Ambil race pack dan cek perlengkapan.":""}</p>`:"");
+ const n2=TI<0?null:nx;if(n2)$("tdy").insertAdjacentHTML("beforeend",`<p class="tn">Besok · <b>${n2[1]} ${n2[0]}</b> · ${n2[3]}</p>`)}
+else{$("tdy-date").textContent="Selamat!";$("tdy").innerHTML=`<div class="tbig"><div class="tt">Race sudah lewat. Istirahat, makan, dan pulihkan diri.</div></div>`}
+const ok="Notification" in window,tm=$("ntm"),st=$("nst"),pad=v=>String(v).padStart(2,"0");let last=-9;
+try{tm.value=localStorage.getItem("ubtrNtm")||tm.value}catch(e){}
+const msg=()=>r?["UBTR 25K · "+r[1]+" "+r[0],r[2]==="race"?r[3]:TY[r[2]][0]+": "+r[3]]:["UBTR 25K","Tidak ada jadwal hari ini"];
+const fire=()=>{const m=msg(),tt=$("toast");tt.innerHTML=`<b>${m[0]}</b><br>${m[1]}`;tt.classList.add("on");try{if(ok&&Notification.permission==="granted")new Notification(m[0],{body:m[1]})}catch(e){}};
+const sync=()=>{let s="";try{s=!ok?"Browser ini tidak mendukung notifikasi sistem; pengingat tampil di halaman.":Notification.permission==="granted"?"Notifikasi aktif.":Notification.permission==="denied"?"Notifikasi diblokir di browser; pengingat tampil di halaman.":"Belum diaktifkan."}catch(e){s="Pengingat tampil di halaman."}st.textContent=s};
+$("nbtn").onclick=()=>{try{if(ok)Notification.requestPermission().then(sync,sync);else sync()}catch(e){sync()}};
+$("ntest").onclick=fire;
+tm.addEventListener("input",()=>{try{localStorage.setItem("ubtrNtm",tm.value)}catch(e){}});
+setInterval(()=>{const w=new Date(Date.now()+252e5);if(pad(w.getUTCHours())+":"+pad(w.getUTCMinutes())===tm.value&&last!==TI*1440+w.getUTCHours()*60+w.getUTCMinutes()&&r){last=TI*1440+w.getUTCHours()*60+w.getUTCMinutes();fire()}},15000);
+sync()}
 }
 {let st="06:00";try{st=localStorage.getItem("ubtrStart")||st}catch(e){}
 $("chips").insertAdjacentHTML("afterbegin",`<div class="chip"><b>4:00 / ±4:15</b><span>Target A / B</span></div>`);
@@ -203,6 +268,8 @@ function tick(){const s=Math.floor((tg()-Date.now())/1e3);let o;
  else{const el=-s;o=el>25200?bx([["Selesai","batas COT 7 jam terlewati"]]):bx([["Race berjalan","sejak start"],[Math.floor(el/3600)+":"+p2(Math.floor(el%3600/60))+":"+p2(el%60),"waktu berjalan"],[Math.floor((25200-el)/3600)+":"+p2(Math.floor((25200-el)%3600/60)),"sisa menuju COT"]])}
  $("cdb").innerHTML=o}
 tick();setInterval(tick,1000)}
+{const MS=["Besok mulai latihan. Hari ini cukup siapkan sepatu dan botol, lalu tidur lebih awal.","Mulai pelan: tubuhmu sedang dibangunkan. Langkah pertama selalu yang paling ringan.","Hari long run puncak. Lari santai, makan dan minum seperti hari race, nikmati jalurnya.","Pulih juga bagian dari latihan. Tugasmu hari ini: jalan santai dan peregangan.","Istirahat itu bagian dari rencana, bukan kemalasan. Kakimu sedang menguat.","Tanjakan hari ini adalah Candi Telih versi kecil. Sabar, power hike, jangan ngegas.","Kuat dibangun dari hal kecil: glute, betis, core. Teknik dulu, beban belakangan.","Turun dengan langkah pendek dan cepat. Quad yang terlatih hari ini menyelamatkan km 23 nanti.","Satu hari tenang sebelum long run sedang. Tidur yang cukup malam ini.","Lari berat terakhir. Selesaikan dengan rapi, setelah ini tinggal merapikan dan memulihkan.","Kerja kerasmu sudah masuk tabungan. Hari ini biarkan tubuh menyerapnya.","Taper dimulai. Merasa segar bukan alasan untuk menambah latihan.","Mobilitas ringan hari ini. Rawat sendi, rawat konsistensi.","Tidak perlu membuktikan apa pun sekarang. Percaya pada latihanmu.","Strides singkat: ingatkan kakimu rasanya cepat, lalu berhenti sebelum capek.","Seminggu lagi. Jaga tidur dan makan; hal-hal yang membosankan itulah yang menang.","Gelisah sebelum race itu normal. Itu tanda kamu peduli.","Lari santai, senyum, nikmati. Kamu jauh lebih siap dari bulan lalu.","Istirahat penuh. Yang kamu butuhkan sekarang adalah kesabaran.","Lari ringan, strides, selesai. Simpan tenagamu untuk Sabtu.","Mulai prioritaskan tidur. Tidurmu malam ini ikut menentukan km 23.","Tambah karbohidrat, tetap tenang. Cek perlengkapan sekali lagi.","Besok hari-H. Ambil race pack, siapkan semuanya, lalu tidur sebisanya.","Hari ini saatnya. Mulai pelan, power hike di tanjakan, putuskan di Candi Telih. Kamu siap.","Kamu sudah melakukannya. Istirahat, makan enak, dan banggalah pada dirimu."];
+const gset=()=>{const w=new Date(Date.now()+252e5),ti=Math.floor((Date.UTC(w.getUTCFullYear(),w.getUTCMonth(),w.getUTCDate())-Date.UTC(2026,9,30))/864e5),hr=w.getUTCHours(),sp=hr<11?"pagi":hr<15?"siang":hr<18?"sore":"malam";$("grh").textContent="Hi Gum, selamat "+sp;$("grm").textContent=MS[Math.max(0,Math.min(24,ti+1))]};gset();setInterval(gset,60000)}
 bars();
 drawMap();drawProf();
 </script></body></html>
